@@ -30,6 +30,42 @@ enum bot_orientation_t {
 	SOUTH,
 };
 
+enum object_visible_t {
+	OBJECT_UNKNOWN,
+	OBJECT_NONE,
+	OBJECT_BOT, // Orientation unknown
+	OBJECT_BOT_FACING_EAST,
+	OBJECT_BOT_FACING_NORTH,
+	OBJECT_BOT_FACING_WEST,
+	OBJECT_BOT_FACING_SOUTH,
+};
+
+/*
+
++------------+-------+-------------+
+| LEFT_AHEAD | AHEAD | RIGHT_AHEAD |
++------------+-------+-------------+
+| FRONT_LEFT | FRONT | FRONT_RIGHT |
++------------+-------+-------------+
+| LEFT       |  BOT  |       RIGHT |
++------------+-------+-------------+
+
+        Bot's field of view
+        -------------------
+*/
+
+enum field_of_view_t {
+	LEFT,
+	FRONT_LEFT,
+	FRONT,
+	FRONT_RIGHT,
+	RIGHT,
+	LEFT_AHEAD,
+	AHEAD,
+	RIGHT_AHEAD,
+	NR_FIELD_OF_VIEW,
+};
+
 struct bot_read_only_t {
 	int64_t  positionx;
 	int64_t  positiony;
@@ -37,7 +73,19 @@ struct bot_read_only_t {
 	enum bot_orientation_t orientation;
 	enum bot_reaction_t    reaction;
 	enum bot_error_t       error;
-	// TODO: objects around bot
+	// Objects visible by the bot
+	enum object_visible_t  object[NR_FIELD_OF_VIEW];
+};
+
+struct bot_read_only_t {
+	int64_t  positionx;
+	int64_t  positiony;
+	int64_t  positionz;
+	enum bot_orientation_t orientation;
+	enum bot_reaction_t    reaction;
+	enum bot_error_t       error;
+	// Objects visible by the bot
+	enum object_visible_t  object[NR_FIELD_OF_VIEW];
 };
 
 struct bot_read_write_t {
