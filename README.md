@@ -20,7 +20,7 @@ A bot knows its `position`, its `orientation` and the `objects` visible in front
 At each tick, the bot has to take an `action` such as `WALK` or `TURN`.
 It is up to the player to write a program that will take the decision for the bot.
 
-Programs are single function that takes a bot as argument and returns an error code.
+Programs are single functions that take a bot as argument and return an error code.
 For example, the following program will always take the decision to `WAIT`:
 
 ```
