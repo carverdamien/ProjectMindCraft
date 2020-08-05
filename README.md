@@ -15,7 +15,7 @@ A menu offers the following choices:
 
 ## Quick programming guide
 
-The [bot.h](./mindcraft/gam0/bot.h) file defines how bot's data is structured.
+The [bot.h](./mindcraft/gam0/bot.h) file defines how the bot's data is structured.
 A bot knows its `position`, its `orientation` and the `objects` visible in front of it.
 At each tick, the bot has to take an `action` such as `WALK` or `TURN`.
 It is up to the player to write a program that will take the decision for the bot.
