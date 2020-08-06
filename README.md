@@ -42,3 +42,10 @@ More examples are provides in the [bots](./bots) directory.
 ## DevLog
 
 0. https://youtu.be/ji8kWSmT3Ys
+
+## Challenges
+
+Submit your solution to a challenge with a pull request:
+
+1. [spiral_bot.c](./bots/spiral_bot.c)
+
