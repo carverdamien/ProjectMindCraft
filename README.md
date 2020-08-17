@@ -42,6 +42,7 @@ More examples are provides in the [bots](./bots) directory.
 ## DevLog
 
 0. https://youtu.be/ji8kWSmT3Ys
+1. https://youtu.be/tzbaCrTJsdo
 
 ## Challenges
 
