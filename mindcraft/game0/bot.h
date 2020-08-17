@@ -1,17 +1,23 @@
+#ifndef _BOT_H_
+#define _BOT_H_
+
+#include <mindcraft/types.h>
+#include <mindcraft/game0/physics.h>
+
 enum bot_action_t {
 	BOT_WAIT,
 	BOT_WALK,
 	BOT_TURN_RIGHT,
 	BOT_TURN_LEFT,
 	BOT_NR_ACTION,
-};
+} __attribute__ ((__packed__));
+ASSERT(sizeof(enum bot_action_t) == 1);
 
 enum bot_error_t {
 	BOT_SUCCESS,
-	BOT_VS_BOT_COLLISION,
-	BOT_VS_BOT_COLLISION_2_CYLE,
-	BOT_COLLISION,
-};
+	BOT_PHYSICS_ERROR,
+} __attribute__ ((__packed__));
+ASSERT(sizeof(enum bot_error_t) == 1);
 
 enum bot_reaction_t {
 	BOT_IDLE,
@@ -21,24 +27,28 @@ enum bot_reaction_t {
 	BOT_ROTATE_LEFT,
 	BOT_ROTATE_RIGHT,
 	BOT_NR_REACTION,
-};
+} __attribute__ ((__packed__));
+ASSERT(sizeof(enum bot_reaction_t) == 1);
 
 enum bot_orientation_t {
 	EAST,
 	NORTH,
 	WEST,
 	SOUTH,
-};
+} __attribute__ ((__packed__));
+ASSERT(sizeof(enum bot_orientation_t) == 1);
 
-enum object_visible_t {
-	OBJECT_UNKNOWN,
-	OBJECT_NONE,
-	OBJECT_BOT, // Orientation unknown
-	OBJECT_BOT_FACING_EAST,
-	OBJECT_BOT_FACING_NORTH,
-	OBJECT_BOT_FACING_WEST,
-	OBJECT_BOT_FACING_SOUTH,
-};
+enum visible_object_t {
+	VISIBLE_OBJECT_UNKNOWN,
+	VISIBLE_OBJECT_NONE,
+	VISIBLE_OBJECT_BOT, // Orientation unknown
+	VISIBLE_OBJECT_BOT_FACING_EAST,
+	VISIBLE_OBJECT_BOT_FACING_NORTH,
+	VISIBLE_OBJECT_BOT_FACING_WEST,
+	VISIBLE_OBJECT_BOT_FACING_SOUTH,
+	VISIBLE_OBJECT_METEORITE,
+} __attribute__ ((__packed__));
+ASSERT(sizeof(enum visible_object_t) == 1);
 
 /*
 
@@ -64,28 +74,16 @@ enum field_of_view_t {
 	AHEAD,
 	RIGHT_AHEAD,
 	NR_FIELD_OF_VIEW,
-};
+} __attribute__ ((__packed__));
+ASSERT(sizeof(enum field_of_view_t) == 1);
 
 struct bot_read_only_t {
-	int64_t  positionx;
-	int64_t  positiony;
-	int64_t  positionz;
+	struct physics_t physics;
 	enum bot_orientation_t orientation;
 	enum bot_reaction_t    reaction;
 	enum bot_error_t       error;
 	// Objects visible by the bot
-	enum object_visible_t  object[NR_FIELD_OF_VIEW];
-};
-
-struct bot_read_only_t {
-	int64_t  positionx;
-	int64_t  positiony;
-	int64_t  positionz;
-	enum bot_orientation_t orientation;
-	enum bot_reaction_t    reaction;
-	enum bot_error_t       error;
-	// Objects visible by the bot
-	enum object_visible_t  object[NR_FIELD_OF_VIEW];
+	enum visible_object_t  object[NR_FIELD_OF_VIEW];
 };
 
 struct bot_read_write_t {
@@ -98,3 +96,5 @@ struct bot_t {
 	struct bot_read_only_t  r;
 	struct bot_read_write_t rw;
 };
+
+#endif /* _BOT_H_ */
