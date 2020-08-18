@@ -41,6 +41,8 @@ More examples are provides in the [bots](./bots) directory.
 
 ## YouTube DevLog
 
+[YouTube Playlist:](https://www.youtube.com/playlist?list=PL3C75lW2it0hcKLD6gWCC6gioWwPY6gHr)
+
 0. https://youtu.be/ji8kWSmT3Ys
 1. https://youtu.be/tzbaCrTJsdo
 
