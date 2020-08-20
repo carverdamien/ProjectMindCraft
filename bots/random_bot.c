@@ -8,20 +8,20 @@ uint64_t random_bot(struct bot_t *bot) {
 
 	if (r < (RRANGE*50) ) {
 		/* 50% */
-		bot->rw.action = BOT_WALK;
+		bot->rw.action = BOT_ACTION_WALK;
 		return 0;
 	}
 	if (r < (RRANGE*70)) {
 		/* 20% */
-		bot->rw.action = BOT_TURN_LEFT;
+		bot->rw.action = BOT_ACTION_TURN_LEFT;
 		return 0;
 	}
 	if (r < (RRANGE*90)) {
 		/* 20% */
-		bot->rw.action = BOT_TURN_RIGHT;
+		bot->rw.action = BOT_ACTION_TURN_RIGHT;
 		return 0;
 	}
 	/* 10% */
-	bot->rw.action =  BOT_WAIT;
+	bot->rw.action =  BOT_ACTION_WAIT;
 	return 0;
 }

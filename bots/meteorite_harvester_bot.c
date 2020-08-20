@@ -6,7 +6,7 @@
 static __attribute__((always_inline))
 bool meteorite_in_front(struct bot_t *bot)
 {
-	return bot->r.object[FRONT] == VISIBLE_OBJECT_METEORITE;
+	return bot->r.object[FIELD_OF_VIEW_FRONT] == VISIBLE_OBJECT_METEORITE;
 }
 
 uint64_t meteorite_harvester_bot(struct bot_t *bot) {
@@ -23,17 +23,17 @@ uint64_t meteorite_harvester_bot(struct bot_t *bot) {
 	}
 
 	if (r < (RRANGE*5) ) {
-		bot->rw.action = BOT_WALK;
+		bot->rw.action = BOT_ACTION_WALK;
 		return 0;
 	}
 	if (r < (RRANGE*7)) {
-		bot->rw.action = BOT_TURN_LEFT;
+		bot->rw.action = BOT_ACTION_TURN_LEFT;
 		return 0;
 	}
 	if (r < (RRANGE*9)) {
-		bot->rw.action = BOT_TURN_RIGHT;
+		bot->rw.action = BOT_ACTION_TURN_RIGHT;
 		return 0;
 	}
-	bot->rw.action =  BOT_WAIT;
+	bot->rw.action =  BOT_ACTION_WAIT;
 	return 0;
 }
