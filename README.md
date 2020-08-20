@@ -57,4 +57,5 @@ https://discord.gg/HzAcR8a
 Submit your solution to a challenge with a pull request:
 
 1. [spiral_bot.c](./bots/spiral_bot.c)
+2. [meteorite_harvester_bot.c](./bots/meteorite_harvester_bot.c)
 
