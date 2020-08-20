@@ -22,6 +22,6 @@ uint64_t random_bot(struct bot_t *bot) {
 		return 0;
 	}
 	/* 10% */
-	bot->rw.action =  BOT_ACTION_WAIT;
+	bot->rw.action = BOT_ACTION_WAIT;
 	return 0;
 }

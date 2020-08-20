@@ -11,9 +11,9 @@ bool meteorite_in_front(struct bot_t *bot)
 
 uint64_t meteorite_harvester_bot(struct bot_t *bot) {
 
-  /* Coding Challenge:
-   * Improve the harvesting efficiency
-   */
+	/* Coding Challenge:
+	 * Improve the harvesting efficiency
+	 */
 
 	uint32_t r = ((uint32_t) rng(&bot->rw.random)) % (RRANGE*10);
 
@@ -34,6 +34,6 @@ uint64_t meteorite_harvester_bot(struct bot_t *bot) {
 		bot->rw.action = BOT_ACTION_TURN_RIGHT;
 		return 0;
 	}
-	bot->rw.action =  BOT_ACTION_WAIT;
+	bot->rw.action = BOT_ACTION_WAIT;
 	return 0;
 }
