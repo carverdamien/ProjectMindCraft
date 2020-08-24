@@ -168,10 +168,17 @@ struct bot_read_only_t {
 	enum visible_object_t  object[NR_FIELD_OF_VIEW];
 };
 
+#ifndef BOT_STORAGE_T
+#define BOT_STORAGE_T
+typedef char bot_storage_t[1024];
+#endif
+
+ASSERT(sizeof(bot_storage_t) <= 1024 );
+
 struct bot_read_write_t {
 	enum bot_action_t action;
 	int32_t           random;
-	char              storage[1024];
+	bot_storage_t     storage;
 };
 
 struct bot_t {
