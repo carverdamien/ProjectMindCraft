@@ -45,6 +45,7 @@ More examples are provides in the [bots](./bots) directory.
 
 0. https://youtu.be/ji8kWSmT3Ys
 1. https://youtu.be/tzbaCrTJsdo
+2. https://youtu.be/uAWcOc-E1UQ
 
 ## Discord Server
 
