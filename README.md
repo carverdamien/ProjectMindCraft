@@ -12,6 +12,7 @@ Pressing Escape opens the main menu with the following choices:
 1. Enter `Camera Mode` to explore the world.
 2. Enter `Editor Mode` to write and upload code that will modify the behavior of the objects in the world.
 3. Enter `Console Mode` to show the latest error messages from the server.
+4. Enter `Stats Mode` to display statistics about events in the game.
 
 ## Quick programming guide
 
