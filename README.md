@@ -33,11 +33,11 @@ uint64_t idle_bot(struct bot *bot) {
 
 More examples are provides in the [bots](./bots) directory.
 
-## Download release v1.3-alpha
+## Download release v1.4-alpha
 
-* [Windows](https://github.com/carverdamien/ProjectMindCraft/releases/download/v1.3-alpha/windows.zip)
-* [OSX](https://github.com/carverdamien/ProjectMindCraft/releases/download/v1.3-alpha/osx.zip)
-* [Linux](https://github.com/carverdamien/ProjectMindCraft/releases/download/v1.3-alpha/linux.zip)
+* [Windows](https://github.com/carverdamien/ProjectMindCraft/releases/download/v1.4-alpha/windows.zip)
+* [OSX](https://github.com/carverdamien/ProjectMindCraft/releases/download/v1.4-alpha/osx.zip)
+* [Linux](https://github.com/carverdamien/ProjectMindCraft/releases/download/v1.4-alpha/linux.zip)
 
 ## YouTube DevLog
 
