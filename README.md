@@ -60,6 +60,10 @@ More examples are provides in the [bots](./bots) directory.
 1. https://youtu.be/tzbaCrTJsdo
 2. https://youtu.be/uAWcOc-E1UQ
 
+## YouTube Let's Play
+
+0. https://youtu.be/haaWyKG_bU0
+
 ## Discord Server
 
 Daily updates/chat on discord
