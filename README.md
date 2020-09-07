@@ -32,6 +32,18 @@ uint64_t idle_bot(struct bot *bot) {
 }
 ```
 
+Beginners are invited to try [bot_coroutine.h](./mindcraft/game0/bot_coroutine.h):
+```
+#include<mindcraft/game0/bot_coroutine.h>
+BEGIN_BOT
+while (true) {
+	TURN_RIGHT
+	WALK
+	WALK
+}
+END_BOT
+```
+
 More examples are provides in the [bots](./bots) directory.
 
 ## Download release v1.4-alpha
