@@ -57,11 +57,11 @@ After `10` times, we stop the loop.
 ```
 #include<mindcraft/game0/bot_coroutine.h>
 BEGIN_BOT_WITH_VAR(int i;)
-	var->i = 0;
-	while (var->i<10) {
-		WALK;
-		var->i = var->i + 1;
-	}
+var->i = 0;
+while (var->i<10) {
+	WALK;
+	var->i = var->i + 1;
+}
 END_BOT_WITH_VAR
 ```
 The `var->i = 0;` is an instruction that asks to store the value `0` in the variable `i`.
