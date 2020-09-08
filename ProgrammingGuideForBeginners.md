@@ -70,7 +70,7 @@ The `var->i<10` tests if `i` is smaller than `10`, because we want to repeat the
 The `var->i = var->i + 1;` increases the value of `i` by `1`.
 Notice that instructions are followed by `;` except inside a test (`while`).
 
-## Branching
+## Branches
 
 Branches are used to choose instruction to execute based on a condition.
 
