@@ -67,6 +67,9 @@ struct var_t* var = ((struct var_t*) __MEMORY__);
 	return 0; \
 }
 
+#define THERE_IS(SOMETHING, SOMEWHERE) \
+(__BOT__->r.object[SOMEWHERE] == SOMETHING)
+
 /* Template without Variables */
 
 #define BEGIN_BOT  \
@@ -89,6 +92,9 @@ struct var_t* var = ((struct var_t*) __MEMORY__);
 
 #define END_BOT_WITH_VAR \
 	END_BOT_BODY
+
+#define THERE_IS_NOTHING_IN_FRONT     THERE_IS(VISIBLE_OBJECT_NONE, FIELD_OF_VIEW_FRONT)
+#define THERE_IS_A_METEORITE_IN_FRONT THERE_IS(VISIBLE_OBJECT_METEORITE, FIELD_OF_VIEW_FRONT)
 
 /* BOT_ACTION */
 #define WAIT       YIELD(BOT_ACTION_WAIT);

@@ -43,7 +43,7 @@ The forever loop repeat the instructions between the braces forever (between `{`
 #include<mindcraft/game0/bot_coroutine.h>
 BEGIN_BOT
 while(true) {
-  WALK
+	WALK
 }
 END_BOT
 ```
@@ -69,4 +69,25 @@ Indeed, we just started the program, and we haven't `WALK`ed yet.
 The `var->i<10` tests if `i` is smaller than `10`, because we want to repeat the action `10` times.
 The `var->i = var->i + 1;` increases the value of `i` by `1`.
 Notice that instructions are followed by `;` except inside a test (`while`).
+
+## Branching
+
+Branches are used to choose instruction to execute based on a condition.
+
+In this example, we want our bot to `WALK` if `THERE_IS_NOTHING_IN_FRONT` and we want it to turn back otherwise.
+```
+#include<mindcraft/game0/bot_coroutine.h>
+BEGIN_BOT
+while(true) {
+	if (THERE_IS_NOTHING_IN_FRONT) {
+		WALK
+	} else {
+		TURN_RIGHT
+		TURN_RIGHT
+	}
+}
+END_BOT
+```
+
+Can you use the condition `THERE_IS_A_METEORITE_IN_FRONT` to banch on the action `HARVEST` ?
 
