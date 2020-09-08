@@ -72,7 +72,7 @@ Notice that instructions are followed by `;` except inside a test (`while`).
 
 ## Branches
 
-Branches are used to choose instruction to execute based on a condition.
+Branches are used to choose instructions to execute based on a condition.
 
 In this example, we want our bot to `WALK` if `THERE_IS_NOTHING_IN_FRONT` and we want it to turn back otherwise.
 ```
