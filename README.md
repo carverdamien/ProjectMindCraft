@@ -46,11 +46,11 @@ END_BOT
 
 More examples are provides in the [bots](./bots) directory.
 
-## Download release v2.1-alpha
+## Download release v2.1.1-alpha
 
-* [Windows](https://github.com/carverdamien/ProjectMindCraft/releases/download/v2.1-alpha/windows.zip)
-* [OSX](https://github.com/carverdamien/ProjectMindCraft/releases/download/v2.1-alpha/osx.zip)
-* [Linux](https://github.com/carverdamien/ProjectMindCraft/releases/download/v2.1-alpha/linux.zip)
+* [Windows](https://github.com/carverdamien/ProjectMindCraft/releases/download/v2.1.1-alpha/windows.zip)
+* [OSX](https://github.com/carverdamien/ProjectMindCraft/releases/download/v2.1.1-alpha/osx.zip)
+* [Linux](https://github.com/carverdamien/ProjectMindCraft/releases/download/v2.1.1-alpha/linux.zip)
 
 ## YouTube DevLog
 
